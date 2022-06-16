@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zb.mapper.Deptmapper">
+    <resultMap id="av" type="com.zb.pojo.Dept">
+        <id column="id" property="id"></id>
+        <result property="deptname" column="deptname"></result>
+    </resultMap>
+    <select id="getAllger" resultMap="av">
+        select * from dept
+    </select>
+</mapper>

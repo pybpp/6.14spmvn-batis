@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zb.mapper.Personmapper">
+    <select id="getAllPerson" resultType="com.zb.pojo.Person">
+    select *from Person
+
+    </select>
+    <select id="mingcheng" resultType="com.zb.pojo.Person">
+        select *from Person
+      <if test="name!=-1 and name!=null">
+          where dept_id=#{name}
+      </if>
+
+
+    </select>
+</mapper>
